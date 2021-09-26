@@ -377,12 +377,35 @@
             </div>
         </div>
     </div>
-
+</body>
 
 <script src="./assets/index.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js" 
 integrity="sha512-PNXCBnFH9wShbV+mYnrfo0Gf3iSREgBWmYAoMIfc+Z83vVq3Nu4yxBk6j+BZ40ZIhtW3WlTQdBvW3AYLAnlgpA==" 
 crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
 
+<script>
 
-</body></html>
+    window.addEventListener ('scroll', function (e) {
+
+        const target = document.querySelectorAll('.scroll');
+        // target.style.transform = 'translate3d(0px, 50px, 0px';
+        // target.style.background = '#b3ff00';
+        // console.log(target.style);
+        // console.log(window.pageYOffset);
+        var scrolled = window.pageYOffset;
+       
+        var index = 0, length = target.length; 
+        for ( index; index < length; index++ ) {
+            var pos = window.pageYOffset * target[index].dataset.rate;
+
+            target[index].style.transform = 'translate3d(0px, '+pos+ 'px, 0px)';
+        }
+
+});
+
+</script>
+
+
+
+</html>
